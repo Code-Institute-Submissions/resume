@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700|Dosis:100,200,300,400,500,600,700|Shadows+Into+Light:100,200,300,400,500,600,700');
+
+/* -------------------------------------------------------------------------------HEADER JUMBOTRON */
+
+.jumbotron {
+    margin: 0px;
+    background: url("../pics/header.jpg");
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top:8em;
+    padding-bottom:8em;
+}
+
+
+.container-fluid {
+  font-family: 'Shadows Into Light', 'sans-serif';
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+.header-text {
+    text-align: center;
+    width:100%;
+}
+
+.name {
+    font-size: 3em;
+}
+.job {
+    font-size:1.5em;
+}
+.row {
+    margin:0px;
+    padding-left: 15px;
+    
+}
+
+
+
+@media only screen and (max-width: 411px) {
+    .jumbotron {
+    padding-top:2.5em;
+    padding-bottom:2.5em;;}
+    /*h1.header-text {*/
+    /*    font-size: 2.5em;}*/
+    /*h2.header-text {*/
+    /*    font-size:1.3em;}*/
+}
