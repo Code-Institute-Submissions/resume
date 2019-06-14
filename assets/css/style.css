@@ -1,21 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700|Dosis:100,200,300,400,500,600,700|Shadows+Into+Light:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700|Dosis:100,200,300,400,500,600,700|Open+Sans+Condensed:100,200,300,400,500,600,700');
+
+/* -------------------------------------------------------------------------------GENERAL */
+
+.container-fluid, .sidenav a {
+  font-family: 'Open Sans Condensed', 'sans-serif';
+}
 
 /* -------------------------------------------------------------------------------HEADER JUMBOTRON */
 
 .jumbotron {
     margin: 0px;
-    background: url("../pics/header.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../pics/header.jpg") ;
     background-position: top;
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding-top:8em;
-    padding-bottom:8em;
+    padding-bottom:12em;
+    color: #fefefe;
+
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+
 }
 
 
 .container-fluid {
-  font-family: 'Shadows Into Light', 'sans-serif';
+  font-size:2em;
   padding: 0px;
   margin: 0px;
   width: 100%;
@@ -41,11 +53,144 @@
 
 
 @media only screen and (max-width: 411px) {
-    .jumbotron {
-    padding-top:2.5em;
-    padding-bottom:2.5em;;}
-    /*h1.header-text {*/
-    /*    font-size: 2.5em;}*/
-    /*h2.header-text {*/
-    /*    font-size:1.3em;}*/
+    .jumbotron { padding-top:2.5em;padding-bottom:2.5em;}
+    .name {font-size: 1.5em;}
+    .job {font-size:.75em;}}
+    
+/* -------------------------------------------------------------------------------SIDEBAR base code from W3School*/
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
+
+/* The navigation menu links */
+.sidenav a {
+  /*padding: 2px 8px 2px 2px;*/
+  padding-top:10px;
+  padding-bottom: 50px;
+  text-align:center;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fefefe;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #bacfef;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-size: 35px;
+  margin-left: -10px;
+  margin-top: -2px;
+  padding: 0px;
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 0px;
+}
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-width: 411px) {
+  .sidenav {padding-top: 60px;}
+  .sidenav a {font-size: 15px; padding-bottom: 20px;padding-top: 10px;}
+  .sidenav .closebtn {right: 110px;font-size: 35px;margin-left: -15px;padding-top: 2px}
+}
+
+/* -------------------------------------------------------------------------------STICKY TOP MENU base code from W3School*/
+
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: transparent;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  
+}
+
+.sidebarburger {
+  font-size:1.5em;
+  color: #fafafa;
+
+}
+
+
+/* Change background on mouse-over */
+.sidebarburger:hover {
+  color: white;
+}
+
+@media screen and (max-width: 411px) {
+  .sidebarburger {font-size:1.3em;}
+}
+
+/* blinking effect for the terminal icon source https://html-online.com/articles/blinking-text-css-animation/ and https://www.w3schools.com/cssref/css3_pr_animation.asp */
+
+.blinking {
+    animation:blinkingText 0.8s /*infinite*/;
+    animation-iteration-count: 4;
+}
+
+@keyframes blinkingText{
+    0%{     color: #fafafa;    }
+    49%{    color: transparent; }
+    50%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #fafafa;    }
+}
+
+/* -------------------------------------------------------------------------------LANGUAGES */
+
+
+/*.languages-title {
+  font-family: Dosis;
+  text-align: center;
+  font-size: 1em;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#separator-languages {
+  font-size: 0.6em;
+}*/
+
+
+.languages-logos {
+  text-align: center;
+  font-size: 2em;
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 411px) {
+  .languages-logos {padding-left:1px;padding-right:1px;padding-top: 5px}
+
+}
+
+
+
+
+
+
+
