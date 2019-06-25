@@ -31,15 +31,16 @@
 
 
 <div id="main">
-  
+  <div id="overlay"></div><!-- to be used as overlay, can be placed anywhere -->
+
   <div class="navbar">
         <div>
-          <span class="sidebarburger blinking" onclick="openNav()"><i class="fa fa-bars"></i></span>
+          <div class="sidebarburger blinking" onclick="openNav()"><i class="fa fa-bars"></i></div>
         </div>
   </div>
          
   <body>
-    
+
     
     <header class="jumbotron jumbotron-fluid">
       <div class="container-fluid">
@@ -54,30 +55,50 @@
       </div>
     </header>
     
+
+    
+    <section id="about-me">
+    	
+    	<div class="container-fluid">
+    		<div class="row">
+
+					<div class="col-md-4 col-sm-3 col-xs-3" id="about-me-title"><h1>About Me</h1>
+					</div>
+
+					<div class="col-md-8 col-sm-9 col-xs-3" id="about-me-text">
+						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.§ This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+					</div>
+
+    		</div>
+    	</div>
+
+    </section>
+
+
     <section id="languages">
       <div class="container-fluid">
 
+      	<div class="row">
+      		<div class="col languages-title">
+      			Languages & Frameworks I learned to <i class="fas fa-heart"></i>
+      		</div>
+      		
+      	</div>
 
+        <div class="row" id="languages-list">
+					<div class="col languages-logos"><img class="logos" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg/320px-CSS3_and_HTML5_logos_and_wordmarks.svg.png"></div>
+					<div class="col languages-logos"><img class="logos" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Wordpress-Logo.svg/240px-Wordpress-Logo.svg.png"></div>
+					<div class="col languages-logos"><img class="logos" src="./assets/pics/javascript.png"></div>
+					<div class="col languages-logos"><img class="logos" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/240px-Python-logo-notext.svg.png"></div>
+          <div class="col languages-logos"><img class="logos" src="https://static.djangoproject.com/img/logos/django-logo-positive.png"></div>
 
-        <div class="row languages-logos">
-          <div class="col col-sm-3 col-xs-6"><i class="fab fa-html5"></i></div>
-          <div class="col col-sm-3 col-xs-6"><i class="fab fa-css3-alt"></i></div>
-          <div class="col col-sm-3 col-xs-6"><i class="fab fa-js-square"></i></div>
-          <div class="col col-sm-3 col-xs-6"><i class="fab fa-python"></i></div>
         </div>
-<!-- 
-        <div class="row languages-title" >
-          <div class="col-sm">Languages <i class="fas fa-code" id="separator-languages"></i> Frameworks</div>
-        </div> -->
+
           
         
       </div>
     </section>
-    <section >
-      
-      
-    </section>
-
 
     <!-- Optional Bootstrap reltated JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -88,16 +109,21 @@
       function openNav() {
         document.getElementById("mySidenav").style.width = "120px";
         // document.getElementById("main").style.marginLeft = "120px"; 
-        document.body.style.backgroundColor = "rgba(0,0,0,0.45)"; // to dim the rest of the resume page when sidenav is open
+        // document.body.style.backgroundColor = "rgba(0,0,0,0.45)"; // to dim the rest of the resume page when sidenav is open
+        document.getElementById("overlay").style.display = "block"; // dim as an overlay (not background)
+
       }
       
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("main").style.marginLeft= "0";
-        document.body.style.backgroundColor = "white"; // to cancel the dimming when the sidenav is closed
+        // document.body.style.backgroundColor = "white"; // to cancel the dimming when the sidenav is closed
+        document.getElementById("overlay").style.display = "none"; // to cancel the dimming overlay when the sidenav is closed
+
       }
     </script>
   </body>
+
   <footer>
   </footer>
 

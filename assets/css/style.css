@@ -6,8 +6,25 @@
   font-family: 'Open Sans Condensed', 'sans-serif';
 }
 
-body {
-  transition: background-color 1.5s; /* transition for the side navbar */
+
+
+/* ------------------------------------------------------------------OVERLAY from https://www.w3schools.com/howto/howto_css_overlay.asp */
+
+#overlay {
+
+  position: fixed; /* Sit on top of the page content */
+  display: none;  /*Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 1; /* has to stay behind the nav bar which has a z index of 2 */
+
+
+
 }
 
 /* -------------------------------------------------------------------------------HEADER JUMBOTRON */
@@ -15,17 +32,22 @@ body {
 .jumbotron {
     margin: 0px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../pics/header.jpg") ;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-top:8em;
+    padding-top:12em;
     padding-bottom:12em;
     color: #fefefe;
 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
+  max-height: 400px;
+  display: flex;
+  align-items: center;
 
 }
 
@@ -39,19 +61,21 @@ body {
 
 .header-text {
     text-align: center;
+
     width:100%;
 }
 
 .name {
     font-size: 3em;
+       vertical-align: middle;
 }
 .job {
     font-size:1.5em;
+       vertical-align: middle;
 }
 .row {
     margin:0px;
-    padding-left: 15px;
-    
+    padding: 0px;
 }
 
 
@@ -68,7 +92,7 @@ body {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  z-index: 3; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   background-color: #111; /* Black*/
@@ -83,7 +107,7 @@ body {
 .sidenav a {
   /*padding: 2px 8px 2px 2px;*/
   padding-top:10px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   text-align:center;
   text-decoration: none;
   font-size: 20px;
@@ -117,10 +141,12 @@ body {
 
 
 
+
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-width: 411px) {
   .sidenav {padding-top: 60px;}
-  .sidenav a {font-size: 15px; padding-bottom: 20px;padding-top: 10px;}
+  .sidenav a {font-size: 15px; padding-bottom: 30px;padding-top: 10px;}
   .sidenav .closebtn {right: 110px;font-size: 35px;margin-left: -15px;padding-top: 2px}
 }
 
@@ -133,12 +159,18 @@ body {
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
+  z-index: 2;
   
 }
 
 .sidebarburger {
   font-size:1.5em;
   color: #fafafa;
+  background-color: rgba(61, 61, 61, 0.1);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 6px;
+  padding-right: 6px;
 
 }
 
@@ -182,20 +214,106 @@ body {
   font-size: 0.6em;
 }*/
 
+#languages {
+
+  background-image: url("../pics/languages.png") ;
+/*  filter: grayscale(100%);
+*/
+    background-position: center bottom;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 300px;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    display: flex;
+    align-items: center;
+
+}
+
+.languages-title {
+  position: right top;
+  text-align: right;
+  margin-top: -80px;
+  color: #fafafa;
+}
 
 .languages-logos {
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
-  font-size: 2em;
-  padding-top: 50px;
+
+}
+
+.logos {
+  width:100px;
+  height:100px;
+  padding: 10px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+/*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+    object-fit:scale-down;
+        background-color: white;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border: none;
+}
+
+.logos:hover {
+  filter: grayscale(0%);
 }
 
 @media screen and (max-width: 411px) {
-  .languages-logos {padding-left:1px;padding-right:1px;padding-top: 5px}
+  .languages-logos {padding-left:0px;padding-right:0px;padding-top: 5px;}
+  .languages-title {text-align: center; margin-top:0px; margin-bottom: 30px }
+  .logos { width:60px;height:60px;padding: 5px;}
+  .languages-list { min-height: 0px}
+}
+
+/* -------------------------------------------------------------------------------ABOUT ME */
+
+
+#about-me {
+padding-top: 20px;
+
+}
+#about-me-title {
+
+text-align: right;
+width: 100%;
+min-height: 300px;
+/*box-shadow: 8px 8px 8px 8px white inset;
+*/background-image: url("../pics/aboutme.jpg") ;
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../pics/aboutme.jpg") ;*/
+background-position: left bottom;
+background-repeat: no-repeat;
+/*background-attachment: relative;
+*/background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+padding: 0px;
+padding-right:20px;
+margin: 0px;
 
 }
 
+#about-me-text {
+  min-height: 100px;
+  font-size: 20px;
+  padding-right:10px;
+  padding-bottom: 20px;
+  margin: 0px;
+  text-align: justify;
+}
 
 
+@media screen and (max-width: 411px) {
+  #about-me-title {background-image:none; padding-right: 0px; min-height:42px; text-align:center;}
+  #about-me-text {font-size: 15px;}
+
+}
 
 
 
