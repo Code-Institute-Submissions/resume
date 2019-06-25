@@ -88,11 +88,13 @@
       function openNav() {
         document.getElementById("mySidenav").style.width = "120px";
         // document.getElementById("main").style.marginLeft = "120px"; 
+        document.body.style.backgroundColor = "rgba(0,0,0,0.45)"; // to dim the rest of the resume page when sidenav is open
       }
       
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "white"; // to cancel the dimming when the sidenav is closed
       }
     </script>
   </body>

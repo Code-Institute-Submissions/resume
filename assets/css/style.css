@@ -6,6 +6,10 @@
   font-family: 'Open Sans Condensed', 'sans-serif';
 }
 
+body {
+  transition: background-color 1.5s; /* transition for the side navbar */
+}
+
 /* -------------------------------------------------------------------------------HEADER JUMBOTRON */
 
 .jumbotron {
@@ -57,7 +61,7 @@
     .name {font-size: 1.5em;}
     .job {font-size:.75em;}}
     
-/* -------------------------------------------------------------------------------SIDEBAR base code from W3School*/
+/* -------------------------------------------------------------------------------SIDEBAR base code from W3School: https://www.w3schools.com/howto/howto_js_sidenav.asp*/
 
 /* The side navigation menu */
 .sidenav {
@@ -71,6 +75,8 @@
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+
 }
 
 /* The navigation menu links */
@@ -149,8 +155,8 @@
 /* blinking effect for the terminal icon source https://html-online.com/articles/blinking-text-css-animation/ and https://www.w3schools.com/cssref/css3_pr_animation.asp */
 
 .blinking {
-    animation:blinkingText 0.8s /*infinite*/;
-    animation-iteration-count: 4;
+    animation:blinkingText 0.75s /*infinite*/;
+    animation-iteration-count: 5;
 }
 
 @keyframes blinkingText{
