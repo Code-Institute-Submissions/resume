@@ -10,14 +10,37 @@ h3 {
   font-size: 40px;
 }
 
+.contact-form,
+#languages,
+#about-me-title,
+.contact-form,
+.projects-container,
+.jumbotron {
+  height: 500px;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    -moz-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
+
+
+@media only screen and (max-width: 411px) {
+  .contact-form,
+#languages,
+#about-me-container,
+.contact-form,
+.projects-container, {max-height: 300px;}
+.jumbotron {max-height: 250px;}
+h3 {padding: 0 !important; margin:0 !important; text-align: center !important;   display: flex; align-items: center}
+
+}
+
 
 /* ------------------------------------------------------------------OVERLAY from https://www.w3schools.com/howto/howto_css_overlay.asp */
 
 #overlay {
 
   position: fixed; /* Sit on top of the page content */
-  display: none;  /*Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
+*width: 100%; /* Full width (cover the whole page) */
   height: 100%; /* Full height (cover the whole page) */
   top: 0; 
   left: 0;
@@ -25,9 +48,8 @@ h3 {
   bottom: 0;
   background-color: rgba(0,0,0,0.5); /* Black background with opacity */
   z-index: 1; /* has to stay behind the nav bar which has a z index of 2 */
-
-
-
+  opacity: 0;
+  transition: 1.5s ease;
 }
 
 /* -------------------------------------------------------------------------------HEADER JUMBOTRON */
@@ -35,9 +57,6 @@ h3 {
 .jumbotron {
     margin: 0px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../pics/header.jpg") ;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    -moz-filter: grayscale(100%);
-    filter: grayscale(100%);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -49,12 +68,14 @@ h3 {
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
-  height: 600px;
   display: flex;
   align-items: center;
 
 }
 
+.jumbotron-fluid {
+  padding: 0;
+}
 
 .container-fluid {
   font-size:2em;
@@ -85,9 +106,9 @@ h3 {
 
 
 @media only screen and (max-width: 411px) {
-    .jumbotron { padding-top:2.5em;padding-bottom:2.5em;}
     .name {font-size: 1.5em;}
-    .job {font-size:.75em;}}
+    .job {font-size:.75em;}
+  }
     
 /* -------------------------------------------------------------------------------SIDEBAR base code from W3School: https://www.w3schools.com/howto/howto_js_sidenav.asp*/
 
@@ -99,9 +120,10 @@ h3 {
   z-index: 3; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #111; /* Black*/
+  background-color: black;
+
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
+  padding-top: 10px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 
 
@@ -110,11 +132,10 @@ h3 {
 /* The navigation menu links */
 .sidenav a {
   /*padding: 2px 8px 2px 2px;*/
-  padding-top:10px;
-  padding-bottom: 30px;
+  padding: 15px 0 30px 0;
   text-align:center;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 25px;
   color: #fefefe;
   display: block;
   transition: 0.3s;
@@ -122,19 +143,10 @@ h3 {
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #bacfef;
+  font-size: 27px;
+  color:#fff;
 }
 
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  left: 25px;
-  font-size: 35px;
-  margin-left: -10px;
-  margin-top: -2px;
-  padding: 0px;
-}
 
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -147,11 +159,11 @@ h3 {
 
 
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/* On smaller screens, where height is less than 411px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-width: 411px) {
-  .sidenav {padding-top: 60px;}
-  .sidenav a {font-size: 15px; padding-bottom: 30px;padding-top: 10px;}
-  .sidenav .closebtn {right: 110px;font-size: 35px;margin-left: -15px;padding-top: 2px}
+  .sidenav {padding-top: 10px;}
+  .sidenav a {font-size: 30px; padding-bottom: 16px;padding-top: 7px;}
+  .sidenav .closebtn {right: 110px; margin-left:7px; padding-top: 10px}
 }
 
 /* -------------------------------------------------------------------------------STICKY TOP MENU base code from W3School*/
@@ -164,6 +176,7 @@ h3 {
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   z-index: 2;
+      padding: 26px 0 0 43px;
   
 }
 
@@ -185,13 +198,15 @@ h3 {
 }
 
 @media screen and (max-width: 411px) {
-  .sidebarburger {font-size:1.3em;}
+  .sidebarburger {font-size:25px; padding:10px;}
+  .navbar {padding: 0 0 0 0;}
+
 }
 
 /* blinking effect for the terminal icon source https://html-online.com/articles/blinking-text-css-animation/ and https://www.w3schools.com/cssref/css3_pr_animation.asp */
-
+/*
 .blinking {
-    animation:blinkingText 0.75s /*infinite*/;
+    animation:blinkingText 0.75s;
     animation-iteration-count: 5;
 }
 
@@ -202,7 +217,7 @@ h3 {
     99%{    color:transparent;  }
     100%{   color: #fafafa;    }
 }
-
+*/
 /* -------------------------------------------------------------------------------LANGUAGES */
 
 
@@ -221,16 +236,12 @@ h3 {
 #languages {
 
   background-image: url("../pics/languages.png") ;
-/*  filter: grayscale(100%);
-*/
+
     background-position: center bottom;
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 400px;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    -moz-filter: grayscale(100%); 
-    filter: grayscale(100%);
+
     display: flex;
     align-items: center;
 
@@ -299,10 +310,7 @@ h3 {
 #about-me-title {
 
 text-align: left;
-
-
 width: 100%;
-height: 400px;
 background-image: url("../pics/aboutme.jpg") ;
 background-position: left bottom;
 background-repeat: no-repeat;
@@ -325,15 +333,15 @@ color: #fafafa;
 #about-me-text {
   min-height: 100px;
   font-size: 25px;
-  padding: 40px 120px 40px 0px;
-  margin: 0px;
+  padding: 40px 120px 0px 0px;
+  margin: 0 0 0 0;
   text-align: justify;
 }
 
 
 @media screen and (max-width: 411px) {
   #about-me-title {margin-top:-10px; background-image:none; padding-right: 0px; min-height:42px; text-align:center;}
-  #about-me-text {height: 258px; font-size: 15px;}
+  #about-me-text {font-size: 15px;color:black;}
 
 }
 
@@ -385,10 +393,6 @@ filter: grayscale(100%);
 }
 
 
-.projects-container {
-    height: 400px;
-}
-
 /* -------------------------------------------------------------------------------CONTACT FORM https://getbootstrap.com/docs/4.0/components/forms/*/
 
 
@@ -400,31 +404,35 @@ filter: grayscale(100%);
   background-size:cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 400px;
 
   color: #fafafa;
 
-      -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    filter: grayscale(100%);
- 
 
 }
 
 .form-title {
   display: flex;
   align-items:center;
-  padding : 0 0 0 100px;
+  
+}
+
+.form-title h3 {
+
+padding : 0 0 0 5px;
+
 }
 
 .form-top {
 
-  padding : 40px 0 0 0 ;
+  padding : 50px 0 0 0 ;
 }
-/*
-@media screen and (max-width: 411px) {
 
-}*/
+@media screen and (max-width: 411px) {
+ .form-top {
+
+  padding : 5px 0 0 0 ;
+}
+}
 
 
 /* -------------------------------------------------------------------------------FOOTER */
@@ -433,23 +441,29 @@ filter: grayscale(100%);
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 50px;
+  min-height: 50px;
   background-color: black;
   display: flex;
   align-items: center;
   color: white;
   text-align: center;
+  padding: 0;
 }
 
 .footer-logos {
-  font-size: 15px;
+  font-size: 20px;
+  color: #9ca5b5;
+  padding: 0 15px;
+  margin: 0 0 15px 0;
+}
+
+.footer-logos:hover {
   color: #fafafa;
-  padding: 0px 10px 10px 10px;
-  margin-top: -10px;
 }
 
 
+
 @media screen and (max-width: 411px) {
-  .footer-logos {font-size: 20px; padding-left: 20px; padding-right:20px;}
+/*  .footer-logos {font-size: 20px; padding: 0 30px 10px 30px}*/
 
 }
