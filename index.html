@@ -21,10 +21,9 @@
 			<a href="#languages">Languages</a>
 			<a href="#projects">Portfolio</a>
 			<a href="#contact">Contact</a>
-			<a href="#"><i class="fas fa-envelope"></i></a>
-			<a href="#"><i class="fab fa-github"></i></a>
-			<a href="#"><i class="fab fa-linkedin"></i></a>
-			<a href="#"><i class="fas fa-file-download"></i></a>
+			<a href="mailto:raphael.zenou@outlook.com" target="_blank"><i class="fas fa-envelope"></i></a>
+			<a href="https://github.com/raphaelzenou/" target="_blank"><i class="fab fa-github"></i></a>
+			<a href="https://www.linkedin.com/in/raphaelzenou" target="_blank"><i class="fab fa-linkedin"></i></a>
 		</div>
 	</head>
 	<div id="main">
@@ -54,23 +53,38 @@
 					</header>
 
 
-					<section id="about-me-section">
-						<div class="jumbotron-fluid about" >
+<!-- 					<section id="about-me-section">
+						<div class="container-fluid about" >
 							<div class="row" id="about-me-container">
 								<div class="col" id="about-me">
 									<div class="row">
 									
-										<div class="col-lg-4 col-md-4 col-sm-3 col-xs-3" id="about-me-title titles">
+										<div class="col col-md-4" id="about-me-title titles">
 											<h3>About Me</h3>
 										</div>
 
-										<div class="col-lg-8 col-md-8 col-sm-9 col-xs-9" id="about-me-text">
+										<div class="col col-md-8" id="about-me-text">
 											<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.§ This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
 										</div>
 									</div>
 									</div>
 							</div>
 						</div>
+					</section> -->
+
+
+					<section id="about-me-section">
+						<div class="container-fluid" id="about-me">
+							<div class="row">
+								<div class="col-md-4 col-sm-5" id="about-me-title titles">
+									<h3>About Me</h3>
+								</div>
+								<div class="col-md-8 col-sm-7" id="about-me-text">
+									<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.§ This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+								</div>
+							</div>
+						</div>
+
 					</section>
 
 
@@ -105,32 +119,33 @@
 									<div class="row projects-progress">
 										<div class="col container-fluid" id="progress-bars">
 											  <div class="progress">
-											    <div class="progress-bar progress-bar-striped" style="width:95%">
-													<a class="justify-content-center d-flex position-absolute w-100 progress-caption">Test project</a>										    	
+
+											    <div class="progress-bar progress-bar-striped" id="progress0" style="width:99%">
+													<a href="https://github.com/raphaelzenou/resume" target="_blank" class="justify-content-center d-flex position-absolute w-100">User Centric Frontend Development Milestone Project - 99%</a>										    	
 											    </div>
 											  </div>
 											  
 											  <div class="progress">
-											    <div class="progress-bar bg-success progress-bar-striped" style="width:40%">
-											    	
+											    <div class="progress-bar progress-bar-striped" id="progress1" style="width:1%">
+											    	<span class="justify-content-center d-flex position-absolute w-100">Interactive Frontend Development Milestone Project - Not yet started</span>
 											    </div>
 											  </div>
 											  
 											  <div class="progress">
-											    <div class="progress-bar bg-info progress-bar-striped" style="width:50%">
-											    	
+											    <div class="progress-bar progress-bar-striped" id="progress2" style="width:1%">
+											    	<span class="justify-content-center d-flex position-absolute w-100">Practical Python Mini Project - Not yet started</span>
 											    </div>
 											  </div>
 											 
 											  <div class="progress">
-											    <div class="progress-bar bg-warning progress-bar-striped" style="width:60%">
-											    	
+											    <div class="progress-bar progress-bar-striped" id="progress3" style="width:1%">
+											    	<span class="justify-content-center d-flex position-absolute w-100">Data Centric Development Milestone Project - Not yet started</span>
 											    </div>
 											  </div>
 											
 											  <div class="progress">
-											    <div class="progress-bar bg-danger progress-bar-striped" style="width:70%">
-											    	
+											    <div class="progress-bar progress-bar-striped" id="progress4" style="width:1%">
+											    	<span class="justify-content-center d-flex position-absolute w-100">Full Stack Frameworks with Django Milestone Project - Not yet started</span>
 											    </div>
 											  </div>
 											  <br>
@@ -181,7 +196,7 @@
 
 
 													<div class="form-group">
-														<a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send
+														<a class="btn btn-primary" id="send-btn"onclick="document.getElementById('contact-form').submit();">Send | Deactivated
 														</a>
 													</div>
 												</form>
@@ -221,10 +236,9 @@
 						<div class="container-fluid">
 							<div class="row">
 								<div class="col" id="footer">
-									<a href="#"><i class="fas fa-envelope footer-logos"></i></a>
-									<a href="#"><i class="fab fa-github footer-logos"></i></a>
-									<a href="#"><i class="fab fa-linkedin footer-logos"></i></a>
-									<a href="#"><i class="fas fa-file-download footer-logos"></i></a>
+									<a href="mailto:raphael.zenou@outlook.com" target="_blank"><i class="fas fa-envelope footer-logos"></i></a>
+									<a href="https://github.com/raphaelzenou/" target="_blank"><i class="fab fa-github footer-logos"></i></a>
+									<a href="https://www.linkedin.com/in/raphaelzenou" target="_blank"><i class="fab fa-linkedin footer-logos"></i></a>
 								</div>
 							</div>
 						</div>

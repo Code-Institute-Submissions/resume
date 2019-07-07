@@ -2,18 +2,26 @@
 
 /* -------------------------------------------------------------------------------GENERAL */
 
+html {
+      scroll-behavior: smooth; /* only Firefox 36+, Chrome 61+ and Opera 48+ */
+    }
+
 #main {
-  min-height: calc(100vh - 50px); /* 50 px  being the height of the footer */
+  min-height: calc(100vh - 45px); /* 45 px  being the height of the footer */
 }
 
+a {
+  color: #fff;
+}
 
 .container-fluid, .sidenav a {
   font-family: 'Open Sans Condensed', 'sans-serif';
 }
 
 h3 {  
-  font-size: 6.5vw;
-  padding-top: 10px;
+  font-size: 5vw;
+  padding-top: 2vh;
+  font-family: 'Dosis';
 }
 
 .container-fluid {
@@ -26,10 +34,6 @@ h3 {
 
 #jumbotron {
   height: 100vh;
-/*      -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%); 
-    filter: grayscale(100%);
-*/
 }    
 
 
@@ -47,13 +51,7 @@ div {
 }
 
 @media only screen and (max-width: 411px) {
-/*#languages,
-#about-me,
-#contact,
-#projects,
-#jumbotron {height: 200px;}
-*/
-h3 {margin:0!important; text-align: center!important;   }
+h3 {margin:5px!important; text-align: center!important;   font-size: 8vw;   }
 }
 
 
@@ -143,7 +141,7 @@ h3 {margin:0!important; text-align: center!important;   }
 /* The navigation menu links */
 .sidenav a {
   /*padding: 2px 8px 2px 2px;*/
-  padding: 10% 0 10% 0;
+  padding: 3vh 0;
   text-align:center;
   text-decoration: none;
   font-size: 25px;
@@ -173,7 +171,7 @@ h3 {margin:0!important; text-align: center!important;   }
 /* On smaller screens, where height is less than 411px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-width: 411px) {
   .sidenav {padding-top: 10px;}
-  .sidenav a {font-size: 30px; padding-bottom: 16px;padding-top: 7px;}
+  .sidenav a {font-size: 30px;}
   .sidenav .closebtn {right: 110px; margin-left:7px; padding-top: 10px}
 }
 
@@ -210,7 +208,7 @@ h3 {margin:0!important; text-align: center!important;   }
 }
 
 @media screen and (max-width: 411px) {
-  .sidebarburger {font-size:25px; padding:10px;}
+  .sidebarburger {font-size:25px; padding:10px; margin: 20px}
   .navbar {padding: 0 0 0 0;}
 
 }
@@ -231,7 +229,8 @@ h3 {margin:0!important; text-align: center!important;   }
 
 #languages-title {
   color: #fff;
-  text-align: center; 
+  text-align: center;
+  margin-bottom: -5vh;
 }
 
 .wordcloud {
@@ -248,55 +247,47 @@ h3 {margin:0!important; text-align: center!important;   }
 
 /* -------------------------------------------------------------------------------ABOUT ME */
 
-.about {
 
-  
-
-}
 
 
 #about-me {
   color:black;
-  background-color: #fff;
   padding: 0;
+  background-image: url("../pics/aboutmebg.jpg");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-color: #fff;
 }
 
 #about-me-title {
 
 text-align: left;
 width: 100%;
-background-image: url("../pics/aboutme.jpg");
-background-position: left bottom;
-background-repeat: no-repeat;
-background-size: contain;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-padding: 0px;
-padding-left:20px;
-margin: 0px;
+
+
+*/margin: 0px;
 }
 
-#about-me-title h3 {
-position:absolute;
-bottom:0;
-color: #fafafa;
 
 }
-
 #about-me-text {
   max-height: 100%;
   font-size: 2.5vw;
-  padding: 10px;
-  margin: 0 0 0 0;
+  padding: 10px 10px 10px 30px;
+  margin-left: 3vw;
+
   text-align: justify;
   color: black;
 }
 
 
 @media screen and (max-width: 411px) {
-  #about-me-title {max-height:50px; text-align: center!important ;margin-top:-10px; color:black; padding: 0px; text-align:center;}
-  #about-me-text {font-size: 15px;color:black; margin: 0px; }
+  #about-me{  background-color: #fff;background-image: none}
+  #about-me-title {max-height:50px; text-align: center!important ;margin-top:-10px; color:black; padding: 0px; text-align:center;}}
 
 }
 
@@ -310,10 +301,16 @@ color: #fafafa;
 
 }
 
+.progress-bar {
+  text-align: center;
+  font-size: 2vw;
+
+}
+
 .progress {
-  height: 7vh;
+  height: 4vw;
   padding:0;
-  margin: 2vh 0;
+  margin: 3vh 0;
 }
 
 #progress-bars {
@@ -345,7 +342,42 @@ max-height: 100vh;
   padding: 0px;
   }
 
+  #progress0 {
+    color: #fff;
+    background-color: #6495ed;
+    text-align: center;
+  }
+
+    #progress1 {
+    color: black;
+    background-color: #ffd700;
+    text-align: center;
+
+  }
+
+  #progress2 {
+    color: black;
+    background-color: #9370db;
+  }
+
+  #progress3 {
+    color: black;
+    background-color: #3cb371;
+  }
+
+  #progress4 {
+    color: black;
+    background-color: #ff6347 ;
+  }
+
+
   @media screen and (max-width: 411px) {
+    .progress {
+  height: 9vw;
+}
+.progress-bar {
+  font-size: 3vw;
+}
 }
 
 
@@ -353,19 +385,27 @@ max-height: 100vh;
 
 
 #contact {
-
-  background-image: 
-    url("../pics/contact.jpg"); 
+  background-image: url("../pics/contact.jpg"); 
   background-position: center bottom;
   background-size:cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
   color: #fafafa;
+  height:100%;
 
-  height:100%
+}
 
+textarea {
+  color: black;
+}
 
+#send-btn {
+  background-color: #bebebe;
+  border:none;
+}
+
+#send-btn:hover {
+  background-color: #bebebe;
 }
 
 
