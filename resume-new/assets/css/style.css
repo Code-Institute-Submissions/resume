@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700|Dosis:100,200,300,400,500,600,700|Open+Sans+Condensed:100,200,300,400,500,600,700');
+
+/* -------------------------------------------------------------------------------GENERAL */
+
+#main {
+  min-height: calc(100vh - 50px); /* 50 px  being the height of the footer */
+}
+
+
+.container-fluid, .sidenav a {
+  font-family: 'Open Sans Condensed', 'sans-serif';
+}
+
+h3 {  
+  font-size: 6.5vw;
+  padding-top: 10px;
+}
+
+.container-fluid {
+  font-size:2em;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+
+#jumbotron {
+  height: 100vh;
+/*      -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%); 
+    filter: grayscale(100%);
+*/
+}    
+
+
+#languages,
+#about-me,
+#contact,
+#projects, {
+  min-height: 90vh!important;
+}
+
+
+div {
+  margin:0px;
+  padding:0px;
+}
+
+@media only screen and (max-width: 411px) {
+/*#languages,
+#about-me,
+#contact,
+#projects,
+#jumbotron {height: 200px;}
+*/
+h3 {margin:0!important; text-align: center!important;   }
+}
+
+
+
+/* -------------------------------------------------------------------------------HEADER JUMBOTRON */
+
+.jumbotron {
+    margin: 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../pics/header.jpg") ;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top:12em;
+    padding-bottom:12em;
+    color: #fefefe;
+
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+  display: flex;
+  align-items: center;
+
+}
+
+.jumbotron-fluid {
+  padding: 0;
+}
+
+
+.header-text {
+    text-align: center;
+
+    width:100%;
+}
+
+.name {
+    font-size: 8vw;
+       vertical-align: middle;
+}
+.job {
+    font-size:6vw;
+       vertical-align: middle;
+}
+.row {
+    margin:0px;
+    padding: 0px;
+}
+
+#moreinfobtn {
+  background-color: transparent;
+  color: #fefefe;
+  font-size:4vw;
+  margin: 0 0 -40px 0;
+}
+
+#moreinfobtn:hover {
+ color:#fff; 
+
+}
+
+
+@media only screen and (max-width: 411px) {
+    .name {font-size: 1.5em;}
+    .job {font-size:.75em;}
+  }
+    
+/* -------------------------------------------------------------------------------SIDEBAR base code from W3School: https://www.w3schools.com/howto/howto_js_sidenav.asp*/
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: black;
+   overflow-y: hidden; /* Disable  vertical scroll */
+  overflow-x: hidden; /* Disable horizontal scroll */ q   
+  padding-top: 10px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+
+}
+
+/* The navigation menu links */
+.sidenav a {
+  /*padding: 2px 8px 2px 2px;*/
+  padding: 10% 0 10% 0;
+  text-align:center;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fefefe;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  font-size: 27px;
+  color:#fff;
+}
+
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 0px;
+}
+
+
+
+
+
+/* On smaller screens, where height is less than 411px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-width: 411px) {
+  .sidenav {padding-top: 10px;}
+  .sidenav a {font-size: 30px; padding-bottom: 16px;padding-top: 7px;}
+  .sidenav .closebtn {right: 110px; margin-left:7px; padding-top: 10px}
+}
+
+/* -------------------------------------------------------------------------------STICKY TOP MENU base code from W3School*/
+
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: transparent;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 2;
+      padding: 26px 0 0 43px;
+  
+}
+
+.sidebarburger {
+  font-size:1.5em;
+  color: #fafafa;
+  background-color: rgba(61, 61, 61, 0.1);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius:5px;
+  border-color: transparent;
+}
+
+
+/* Change background on mouse-over */
+.sidebarburger:hover {
+  color: white;
+}
+
+@media screen and (max-width: 411px) {
+  .sidebarburger {font-size:25px; padding:10px;}
+  .navbar {padding: 0 0 0 0;}
+
+}
+
+/* -------------------------------------------------------------------------------LANGUAGES */
+
+
+#languages {
+
+  background-image: url("../pics/about-background.png") ;
+  background-color: black;
+  background-position: center center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+
+}
+
+#languages-title {
+  color: #fff;
+  text-align: center; 
+}
+
+.wordcloud {
+  max-width: 100vw;
+  object-position:center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+
+
+/* -------------------------------------------------------------------------------ABOUT ME */
+
+.about {
+
+  
+
+}
+
+
+#about-me {
+  color:black;
+  background-color: #fff;
+  padding: 0;
+}
+
+#about-me-title {
+
+text-align: left;
+width: 100%;
+background-image: url("../pics/aboutme.jpg");
+background-position: left bottom;
+background-repeat: no-repeat;
+background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+padding: 0px;
+padding-left:20px;
+margin: 0px;
+}
+
+#about-me-title h3 {
+position:absolute;
+bottom:0;
+color: #fafafa;
+
+}
+
+#about-me-text {
+  max-height: 100%;
+  font-size: 2.5vw;
+  padding: 10px;
+  margin: 0 0 0 0;
+  text-align: justify;
+  color: black;
+}
+
+
+@media screen and (max-width: 411px) {
+  #about-me-title {max-height:50px; text-align: center!important ;margin-top:-10px; color:black; padding: 0px; text-align:center;}
+  #about-me-text {font-size: 15px;color:black; margin: 0px; }
+
+}
+
+/* ------------------------------------------------------------------------------- PROJECTS Carousel https://getbootstrap.com/docs/4.0/components/carousel/*/
+
+
+.projects-progress {
+
+/*  padding: 50px 30px 30px 30px;
+*/
+
+}
+
+.progress {
+  height: 7vh;
+  padding:0;
+  margin: 2vh 0;
+}
+
+#progress-bars {
+ padding: 0 0 0 0;
+
+max-width: 70vw;
+max-height: 100vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+
+.progress-caption {
+  font-size: 1.5vh;
+}
+
+
+.projects-title{
+  color: black;
+  margin:0px;
+  padding: 10px 0 15px 0;
+  text-align: center;
+
+}
+
+.projects-title h3 {
+  padding: 0px;
+  }
+
+  @media screen and (max-width: 411px) {
+}
+
+
+/* -------------------------------------------------------------------------------CONTACT FORM https://getbootstrap.com/docs/4.0/components/forms/*/
+
+
+#contact {
+
+  background-image: 
+    url("../pics/contact.jpg"); 
+  background-position: center bottom;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: #fafafa;
+
+  height:100%
+
+
+}
+
+
+#form-fields {
+    max-height:100%;
+    width: 100%;
+  object-position:center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+
+.form-title {
+  display: flex;
+  align-items:center;
+  
+}
+
+.form-title h3 {
+
+padding : 0 0 0 5px;
+
+}
+
+.form-top {
+
+  padding : 50px 0 0 0 ;
+}
+
+@media screen and (max-width: 411px) {
+ .form-top {
+
+  padding : 5px 0 0 0 ;
+}
+}
+
+
+/* -------------------------------------------------------------------------------FOOTER */
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: #fafafa;
+  text-align: center;
+  padding: 0;
+}
+
+.footer-logos {
+  font-size: 20px;
+  color: #9ca5b5;
+  padding: 0 15px;
+  margin: 0 0 15px 0;
+}
+
+.footer-logos:hover {
+  color: #fff;
+}
+
+
+
+@media screen and (max-width: 411px) {
+/*  .footer-logos {font-size: 20px; padding: 0 30px 10px 30px}*/
+
+}
