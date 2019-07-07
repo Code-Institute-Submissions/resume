@@ -19,7 +19,7 @@ a {
 }
 
 h3 {  
-  font-size: 5vw;
+  font-size: 5vh;
   padding-top: 2vh;
   font-family: 'Dosis';
 }
@@ -50,7 +50,7 @@ div {
   padding:0px;
 }
 
-@media only screen and (max-width: 411px) {
+@media only screen and (max-width: 415px) {
 h3 {margin:5px!important; text-align: center!important;   font-size: 8vw;   }
 }
 
@@ -114,7 +114,7 @@ h3 {margin:5px!important; text-align: center!important;   font-size: 8vw;   }
 }
 
 
-@media only screen and (max-width: 411px) {
+@media only screen and (max-width: 415px) {
     .name {font-size: 1.5em;}
     .job {font-size:.75em;}
   }
@@ -168,8 +168,8 @@ h3 {margin:5px!important; text-align: center!important;   font-size: 8vw;   }
 
 
 
-/* On smaller screens, where height is less than 411px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-width: 411px) {
+/* On smaller screens, where widght is less than 415px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-width: 415px) {
   .sidenav {padding-top: 10px;}
   .sidenav a {font-size: 30px;}
   .sidenav .closebtn {right: 110px; margin-left:7px; padding-top: 10px}
@@ -207,7 +207,7 @@ h3 {margin:5px!important; text-align: center!important;   font-size: 8vw;   }
   color: white;
 }
 
-@media screen and (max-width: 411px) {
+@media screen and (max-width: 415px) {
   .sidebarburger {font-size:25px; padding:10px; margin: 20px}
   .navbar {padding: 0 0 0 0;}
 
@@ -285,8 +285,8 @@ width: 100%;
 }
 
 
-@media screen and (max-width: 411px) {
-  #about-me{  background-color: #fff;background-image: none}
+@media screen and (max-width: 415px) {
+  #about-me {background-color: #fff; background-image: none;}
   #about-me-title {max-height:50px; text-align: center!important ;margin-top:-10px; color:black; padding: 0px; text-align:center;}}
 
 }
@@ -371,7 +371,7 @@ max-height: 100vh;
   }
 
 
-  @media screen and (max-width: 411px) {
+  @media screen and (max-width: 415px) {
     .progress {
   height: 9vw;
 }
@@ -437,7 +437,7 @@ padding : 0 0 0 5px;
   padding : 50px 0 0 0 ;
 }
 
-@media screen and (max-width: 411px) {
+@media screen and (max-width: 415px) {
  .form-top {
 
   padding : 5px 0 0 0 ;
@@ -471,7 +471,7 @@ footer {
 
 
 
-@media screen and (max-width: 411px) {
+@media screen and (max-width: 415px) {
 /*  .footer-logos {font-size: 20px; padding: 0 30px 10px 30px}*/
 
 }
